@@ -1,0 +1,26 @@
+{
+  "name": "skip-vs-required-tag",
+  "version": "1.0.0",
+  "description": "Example using cy-grep required tag instead of skipping tests",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/skip-vs-required-tag.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bahmutov/skip-vs-required-tag/issues"
+  },
+  "homepage": "https://github.com/bahmutov/skip-vs-required-tag#readme",
+  "devDependencies": {
+    "@bahmutov/cy-grep": "^1.9.1",
+    "cypress": "^12.13.0",
+    "prettier": "^2.8.8"
+  }
+}
