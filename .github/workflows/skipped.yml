@@ -1,0 +1,17 @@
+# a workflow to run all skipped tests nightly
+name: skipped
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  # also allow running this workflow by manually starting it
+  # from the GitHub actions page
+  workflow_dispatch:
+jobs:
+  test:
+    # use the reusable workflow to check out the code, install dependencies
+    # and run the Cypress tests
+    # https://github.com/bahmutov/cypress-workflows
+    uses: bahmutov/cypress-workflows/.github/workflows/standard.yml@v1
+    with:
+      # pass the required tag, just like "--env grepTags=@skip" from command line
+      env: grepTags=@skip
